@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<h3>CALCULADORA</h3>
+<div class="calculator">
+  <input type="text" id="result" disabled>
+  <table>
+        <tr>
+            <td><button onclick="appendToResult('1')">1</button></td>
+            <td><button onclick="appendToResult('2')">2</button></td>
+            <td><button onclick="appendToResult('3')">3</button></td>
+            <td><button onclick="appendToResult('/')">/</button></td>
+            <td colspan="4"><button onclick="clearResult()">C</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendToResult('4')">4</button></td>
+            <td><button onclick="appendToResult('5')">5</button></td>
+            <td><button onclick="appendToResult('6')">6</button></td>
+            <td><button onclick="appendToResult('*')">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendToResult('7')">7</button></td>
+            <td><button onclick="appendToResult('8')">8</button></td>
+            <td><button onclick="appendToResult('9')">9</button></td>
+            <td><button onclick="appendToResult('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="appendToResult('0')">0</button></td>
+            <td><button onclick="appendToResult('.')">.</button></td>
+            <td><button onclick="calculateResult()">=</button></td>
+            <td><button onclick="appendToResult('+')">+</button></td>
+        </tr>
+  </table>
+</div>
+<h3>Par ou Impar</h3>
+<div class="parity-checker">
+    <label for="numberInput">Digite um número:</label>
+    <input type="number" id="numberInput">
+    <button onclick="checkParity()">Verificar</button>
+    <p id="parityResult"></p>
+  </div>
+
+</body>
+</html>
