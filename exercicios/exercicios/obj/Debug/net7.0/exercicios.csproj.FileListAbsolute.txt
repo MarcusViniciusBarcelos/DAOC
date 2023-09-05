@@ -1,0 +1,15 @@
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\bin\Debug\net7.0\exercicios.exe
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\bin\Debug\net7.0\exercicios.deps.json
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\bin\Debug\net7.0\exercicios.runtimeconfig.json
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\bin\Debug\net7.0\exercicios.dll
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\bin\Debug\net7.0\exercicios.pdb
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.csproj.AssemblyReference.cache
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.AssemblyInfoInputs.cache
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.AssemblyInfo.cs
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.csproj.CoreCompileInputs.cache
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.dll
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\refint\exercicios.dll
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.pdb
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\exercicios.genruntimeconfig.cache
+C:\Users\marcu\Desktop\faculdade\sem 4\DAOC\exercicios\exercicios\obj\Debug\net7.0\ref\exercicios.dll
