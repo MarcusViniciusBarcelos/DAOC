@@ -1,5 +1,5 @@
 {
-  "name": "projeto1",
+  "name": "tde",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,10 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "react-proptypes-generate": "^1.7.6"
   }
 }
