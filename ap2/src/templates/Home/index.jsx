@@ -30,13 +30,17 @@ const useFetch = (url, options) => {
 
   useEffect(() => {
     let wait = false;
-    console.log(optionsRef.current.headers);
+    const controller = new AbortController();
+    const signal = controller.signal;
     setLoading(true);
 
     const fetchData = async () => {
       await new Promise((r) => setTimeout(r, 1000));
       try {
-        const response = await fetch(urlRef.current, optionsRef.current);
+        const response = await fetch(urlRef.current, {
+          signal,
+          ...optionsRef.current,
+        });
         const jsonResult = await response.json();
         if (!wait) {
           setResult(jsonResult);
@@ -46,7 +50,7 @@ const useFetch = (url, options) => {
         if (!wait) {
           setLoading(false);
         }
-        throw error;
+        console.log('My error', error.message);
       }
     };
 
@@ -54,6 +58,7 @@ const useFetch = (url, options) => {
 
     return () => {
       wait = true;
+      controller.abort();
     };
   }, [shouldLoad]);
 
@@ -70,10 +75,6 @@ export function Home() {
       },
     },
   );
-
-  useEffect(() => {
-    console.log('postId:', postId);
-  }, [postId]);
 
   if (loading) return <h1>Loading...</h1>;
 
