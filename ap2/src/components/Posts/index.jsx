@@ -1,19 +1,11 @@
 import { useContext, useEffect, useRef } from 'react';
 import { loadPosts } from '../../contexts/PostsProvider/actions';
 import { PostsContext } from '../../contexts/PostsProvider/context';
-import { CounterContext } from '../../contexts/CounterProvider/context';
-import {
-  incrementCounter,
-  decrementCounter,
-} from '../../contexts/CounterProvider/action';
 export const Posts = () => {
   const isMounted = useRef(true);
 
   const postsContext = useContext(PostsContext);
   const { postsState, postsDispatch } = postsContext;
-
-  const counterContext = useContext(CounterContext);
-  const { counterState, counterDispatch } = counterContext;
 
   useEffect(() => {
     isMounted.current = true;
@@ -32,12 +24,6 @@ export const Posts = () => {
 
   return (
     <div>
-      <button onClick={() => incrementCounter(counterDispatch)}>
-        Increment Counter {counterState.counter}
-      </button>
-      <button onClick={() => decrementCounter(counterDispatch)}>
-        Decrement Counter {counterState.counter}
-      </button>
       <h1>Posts</h1>
       {postsState.loading && <p>Loading...</p>}
       {postsState.posts.map((p) => (
