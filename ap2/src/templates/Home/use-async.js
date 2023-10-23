@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import './styles.css';
 
-const useAsync = (asyncFunction, shouldRun) => {
+export const useAsync = (asyncFunction, shouldRun) => {
   const [state, setState] = useState({
     result: null,
     error: null,
@@ -46,27 +46,3 @@ const fetchData = async () => {
   const json = await data.json();
   return json;
 };
-
-export function Home() {
-  const [posts, setPosts] = useState(null);
-  const [reFetchData, result, error, status] = useAsync(fetchData, true);
-
-  function handleClick() {
-    reFetchData();
-  }
-
-  if (status === 'idle') {
-    return <pre>nada executando</pre>;
-  }
-  if (status === 'pending') {
-    return <pre>Loading...</pre>;
-  }
-  if (status === 'error') {
-    return <pre>{JSON.stringify(error, null, 2)}</pre>;
-  }
-  if (status === 'settled') {
-    return <pre onClick={handleClick}>{JSON.stringify(result, null, 2)}</pre>;
-  }
-
-  return 'Hello World!';
-}
