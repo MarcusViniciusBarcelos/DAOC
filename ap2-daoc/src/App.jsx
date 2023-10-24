@@ -15,7 +15,6 @@ function App() {
 
   return (
     <div className='min-h-screen flex flex-col justify-center items-center bg-slate-900 space-y-4 relative'>
-      {/* Div com fundo azul */}
       <div className='w-full h-full bg-slate-900 relative z-10'>
         <Header />
         <Welcome name={'Marcus'} />
@@ -38,7 +37,6 @@ function App() {
         <Footer />
       </div>
 
-      {/* Div com imagem branca para mesclar */}
     </div>
   );
 }
