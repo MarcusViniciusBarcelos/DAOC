@@ -1,5 +1,6 @@
 import {
   useCallback,
+  useDebugValue,
   useEffect,
   useLayoutEffect,
   useRef,
@@ -9,6 +10,8 @@ import './styles.css';
 
 const useMediaQuery = (queryValue, initialValue = false) => {
   const [match, setMatch] = useState(initialValue);
+
+  useDebugValue(match ? 'match' : 'no match');
 
   useEffect(() => {
     let isMounted = true;
