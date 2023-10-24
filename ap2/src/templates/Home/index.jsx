@@ -7,31 +7,32 @@ import {
 } from 'react';
 import './styles.css';
 
+const useMediaQuery = (queryValue, initialValue = false) => {
+  const [match, setMatch] = useState(initialValue);
+
+  useEffect(() => {
+    let isMounted = true;
+    const mathMedia = window.matchMedia(queryValue);
+
+    const handleChange = () => {
+      if (!isMounted) return;
+      setMatch(!!mathMedia.matches);
+    };
+
+    mathMedia.addEventListener('change', handleChange);
+    setMatch(!!mathMedia.matches);
+
+    return () => {
+      isMounted = false;
+      mathMedia.removeEventListener('change', handleChange);
+    };
+  }, [queryValue]);
+
+  return match;
+};
+
 export function Home() {
-  const [counted, setCounted] = useState([0, 1, 2, 3, 4]);
-
-  const divRef = useRef();
-  useLayoutEffect(() => {
-    const now = Date.now();
-    while (Date.now() < Date.now() + 1000);
-    divRef.current.scrollTop = divRef.current.scrollHeight;
-  });
-
-  const handleClick = () => {
-    setCounted((c) => [...c, +c.slice(-1) + 1]);
-  };
-
-  return (
-    <>
-      <button onClick={handleClick}>Count {counted.slice(-1)}</button>
-      <div
-        ref={divRef}
-        style={{ height: '100px', width: '100px', overflow: 'scroll' }}
-      >
-        {counted.map((c) => {
-          return <p key={`c-${c}`}>{c}</p>;
-        })}
-      </div>
-    </>
-  );
+  const huge = useMediaQuery('(min-width: 600px)');
+  const background = huge ? 'green' : 'red';
+  return <h1 style={{ background }}>oi</h1>;
 }
