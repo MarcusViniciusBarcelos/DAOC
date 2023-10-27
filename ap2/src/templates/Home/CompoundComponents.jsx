@@ -1,16 +1,5 @@
 import PropTypes from 'prop-types';
-import {
-  Children,
-  cloneElement,
-  createContext,
-  useCallback,
-  useContext,
-  useDebugValue,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
+import { createContext, useContext, useState } from 'react';
 import './styles.css';
 
 const s = {
