@@ -37,7 +37,7 @@ const TurnButton = ({ isOn, onTurn }) => {
   return <button onClick={onTurn}>Turn {isOn ? 'OFF' : 'ON'}</button>;
 };
 
-export function Home() {
+export function CompoundComponents() {
   return (
     <TurnOnOff>
       <TurnedOn>oi on</TurnedOn>
