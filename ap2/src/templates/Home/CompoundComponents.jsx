@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import {
   Children,
   cloneElement,
+  createContext,
   useCallback,
+  useContext,
   useDebugValue,
   useEffect,
   useLayoutEffect,
@@ -17,47 +19,54 @@ const s = {
   },
 };
 
+const TurnOnOffContext = createContext();
+
 const TurnOnOff = ({ children }) => {
   const [isOn, setIsOn] = useState(false);
   const onTurn = () => setIsOn((s) => !s);
 
-  return Children.map(children, (child) => {
-    const newChild = cloneElement(child, {
-      isOn,
-      onTurn,
-    });
-    return newChild;
-  });
+  return (
+    <TurnOnOffContext.Provider value={{ isOn, onTurn }}>
+      {children}
+    </TurnOnOffContext.Provider>
+  );
 };
-const TurnedOn = ({ isOn, children }) => (isOn ? children : null);
+const TurnedOn = ({ children }) => {
+  const { isOn } = useContext(TurnOnOffContext);
+  return isOn ? children : null;
+};
 
-const TurnedOff = ({ isOn, children }) => (isOn ? null : children);
+const TurnedOff = ({ children }) => {
+  const { isOn } = useContext(TurnOnOffContext);
+  return isOn ? null : children;
+};
 
-const TurnButton = ({ isOn, onTurn }) => {
+const TurnButton = () => {
+  const { isOn, onTurn } = useContext(TurnOnOffContext);
   return <button onClick={onTurn}>Turn {isOn ? 'OFF' : 'ON'}</button>;
 };
 
 export function CompoundComponents() {
   return (
     <TurnOnOff>
-      <TurnedOn>oi on</TurnedOn>
-      <TurnedOff>oi off</TurnedOff>
-      <TurnButton />
+      <div>
+        <TurnedOn>oi on</TurnedOn>
+        <TurnedOff>oi off</TurnedOff>
+        <TurnButton />
+      </div>
     </TurnOnOff>
   );
 }
 
-TurnButton.propTypes = {
-  isOn: PropTypes.bool.isRequired,
-  onTurn: PropTypes.node.isRequired,
-};
-
 TurnedOn.propTypes = {
-  isOn: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
+  isOn: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 TurnedOff.propTypes = {
-  isOn: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
+  isOn: PropTypes.bool,
+  children: PropTypes.node,
+};
+TurnOnOff.propTypes = {
+  children: PropTypes.node,
 };
