@@ -1,27 +1,34 @@
 /* eslint-disable no-undef */
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true,
-  },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+    env: {
+        browser: true,
+        es2021: true,
+        jest: true,
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
-  plugins: ['react'],
-  settings: {
-    react: {
-      version: 'detect',
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:prettier/recommended',
+        'plugin:storybook/recommended',
+      ],
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 12,
+        sourceType: 'module',
     },
-  },
-  rules: {
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'no-unused-vars': 'off',
-  },
+    extends: ['plugin:react/recommended'],
+    plugins: ['react'],
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
+    rules: {
+        'react/react-in-jsx-scope': 'off',
+        'no-undef': 'off',
+        'no-unused-vars': 'off',
+    },
 };
