@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone XYZ",
+      "price": 699.99,
+      "description": "Um smartphone avançado com recursos inovadores.",
+      "photo_url": "https://example.com/smartphone_xyz.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Notebook Ultra",
+      "price": 1299.99,
+      "description": "Um notebook potente para atender às suas necessidades de trabalho e entretenimento.",
+      "photo_url": "https://example.com/notebook_ultra.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Fones de Ouvido Bluetooth",
+      "price": 79.99,
+      "description": "Fones de ouvido sem fio para uma experiência auditiva excepcional.",
+      "photo_url": "https://example.com/fones_bluetooth.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Câmera Digital Pro",
+      "price": 599.99,
+      "description": "Capture momentos especiais com esta câmera digital de alta qualidade.",
+      "photo_url": "https://example.com/camera_pro.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Smart TV 4K",
+      "price": 899.99,
+      "description": "Desfrute de uma experiência visual imersiva com esta Smart TV de alta resolução.",
+      "photo_url": "https://example.com/smart_tv_4k.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Relógio Inteligente",
+      "price": 149.99,
+      "description": "Um relógio inteligente com monitor de saúde e notificações inteligentes.",
+      "photo_url": "https://example.com/relogio_inteligente.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Máquina de Café Automática",
+      "price": 299.99,
+      "description": "Prepare seu café perfeito com esta máquina automática fácil de usar.",
+      "photo_url": "https://example.com/maquina_cafe.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Bicicleta Elétrica",
+      "price": 999.99,
+      "description": "Uma bicicleta elétrica para viagens eficientes e sem esforço.",
+      "photo_url": "https://example.com/bicicleta_eletrica.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Caixa de Som Bluetooth",
+      "price": 59.99,
+      "description": "Curta sua música favorita em qualquer lugar com esta caixa de som portátil.",
+      "photo_url": "https://example.com/caixa_som_bluetooth.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Mochila Tecnológica",
+      "price": 49.99,
+      "description": "Uma mochila moderna com compartimentos especiais para dispositivos eletrônicos.",
+      "photo_url": "https://example.com/mochila_tecnologica.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Teclado Mecânico para Gaming",
+      "price": 129.99,
+      "description": "Um teclado durável e responsivo para uma experiência de jogo excepcional.",
+      "photo_url": "https://example.com/teclado_gaming.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Impressora Multifuncional",
+      "price": 179.99,
+      "description": "Uma impressora versátil para atender às suas necessidades de impressão e digitalização.",
+      "photo_url": "https://example.com/impressora_multifuncional.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Cadeira Ergonômica para Escritório",
+      "price": 199.99,
+      "description": "Uma cadeira confortável e ergonômica para longas horas de trabalho.",
+      "photo_url": "https://example.com/cadeira_ergonomica.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Panela Elétrica Programável",
+      "price": 69.99,
+      "description": "Prepare refeições deliciosas com facilidade usando esta panela elétrica.",
+      "photo_url": "https://example.com/panela_eletrica.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Tênis Esportivo",
+      "price": 89.99,
+      "description": "Tênis confortável e estiloso para suas atividades esportivas.",
+      "photo_url": "https://example.com/tenis_esportivo.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Câmera de Segurança Wi-Fi",
+      "price": 129.99,
+      "description": "Mantenha sua casa segura com esta câmera de segurança fácil de instalar.",
+      "photo_url": "https://example.com/camera_seguranca_wifi.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Ventilador Inteligente",
+      "price": 79.99,
+      "description": "Controle a temperatura de sua casa com este ventilador inteligente.",
+      "photo_url": "https://example.com/ventilador_inteligente.jpg"
+    },
+    {
+      "id": 18,
+      "name": "HD Externo Portátil",
+      "price": 119.99,
+      "description": "Armazene seus arquivos com segurança neste HD externo portátil.",
+      "photo_url": "https://example.com/hd_externo.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Óculos de Realidade Virtual",
+      "price": 249.99,
+      "description": "Explore novos mundos com estes óculos de realidade virtual avançados.",
+      "photo_url": "https://example.com/oculos_realidade_virtual.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Fritadeira Elétrica sem Óleo",
+      "price": 89.99,
+      "description": "Prepare alimentos mais saudáveis com esta fritadeira elétrica sem óleo.",
+      "photo_url": "https://example.com/fritadeira_sem_oleo.jpg"
+    }
+  ]
+}
