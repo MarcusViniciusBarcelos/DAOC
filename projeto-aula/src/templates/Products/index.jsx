@@ -1,14 +1,12 @@
 import { useContext, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ProductContext } from '../../context/ProductContext';
-import { useFetch } from '../../hooks/useFetch';
+import * as Styled from './styles';
 
 export function Products() {
   const context = useContext(ProductContext);
   const [data, setData] = useState([]);
   const navigate = useNavigate();
-
-  const [datax, request] = useFetch('http://localhost:3001', 'products');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,24 +20,51 @@ export function Products() {
       }
     };
     fetchData();
-  }, [context]);
+  }, []);
 
   function handleClick(id) {
     navigate(`/products/${id}`);
   }
+  function handleAddProduct() {
+    navigate('/add-product');
+  }
+
+  function handleDelete(id) {
+    // Fazer uma requisição para apagar o produto com o ID fornecido
+    fetch(`http://localhost:3001/products/${id}`, {
+      method: 'DELETE',
+    })
+      .then((response) => response.json())
+      .then(() => {
+        // Atualizar a lista de produtos após a exclusão
+        const updatedProducts = data.filter((product) => product.id !== id);
+        setData(updatedProducts);
+      })
+      .catch((error) => {
+        console.error('Erro ao apagar produto:', error);
+      });
+  }
 
   return (
-    <div>
-      <h1>Products</h1>
-      {data &&
-        data.map((product) => (
-          <div key={product.id}>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-            <p>{product.description}</p>
-            <button onClick={() => handleClick(product.id)}>Info</button>
-          </div>
-        ))}
-    </div>
+    <>
+      <Styled.AddProductButton onClick={handleAddProduct}>
+        Adicionar Produto
+      </Styled.AddProductButton>
+      <Styled.ProductContainer>
+        {data &&
+          data.map((product) => (
+            <Styled.ProductCard key={product.id}>
+              <img src={product.photo_url} alt={product.name} />
+              <h2>{product.name}</h2>
+              <p>${product.price}</p>
+              <p>{product.description}</p>
+              <button onClick={() => handleClick(product.id)}>Info</button>
+              <Styled.DeleteButton onClick={() => handleDelete(product.id)}>
+                Apagar
+              </Styled.DeleteButton>
+            </Styled.ProductCard>
+          ))}
+      </Styled.ProductContainer>
+    </>
   );
 }

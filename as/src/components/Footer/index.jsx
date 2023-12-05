@@ -1,18 +1,16 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { TextComponent } from '../TextComponent';
 import { SectionContainer } from '../SectionContainer';
 
-export const Footer = ({ footerHtml }) => {
+export const Footer = ({ footerHtmls }) => {
+  const footerHtml = `copy; 2023 Marcus Barcelos. Todos os direitos reservados.`;
   return (
     <Styled.Container>
-      <SectionContainer>
-        <TextComponent>{footerHtml}</TextComponent>
-      </SectionContainer>
+      <SectionContainer>{footerHtml}</SectionContainer>
     </Styled.Container>
   );
 };
 
 Footer.propTypes = {
-  footerHtml: P.string.isRequired,
+  footerHtmls: P.string.isRequired,
 };

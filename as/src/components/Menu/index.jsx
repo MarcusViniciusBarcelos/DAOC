@@ -56,6 +56,19 @@ export const Menu = ({ links = [], logoData }) => {
     return () => window.removeEventListener('resize', windowResizeFn);
   }, [visible, buttonHidden]);
 
+  const navLinks = [
+    { children: 'Home', link: '/' },
+    { children: 'Produtos', link: '/products' },
+    { children: 'Contatos', link: '/contacts' },
+  ];
+
+  const logoDatas = {
+    text: 'Meu Logo',
+    srcImg:
+      'https://logo-8fa5.kxcdn.com/wp-content/uploads/vector-lion-logo-300x300.png',
+    link: '/',
+  };
+
   return (
     <>
       <Styled.Button
@@ -75,8 +88,8 @@ export const Menu = ({ links = [], logoData }) => {
           onClick={() => setVisible(false)}
           role="navigation"
         >
-          <LogoLink {...logoData} />
-          <NavLinks links={links} />
+          <LogoLink {...logoDatas} />
+          <NavLinks links={navLinks} />
         </Styled.MenuContainer>
       </Styled.Container>
     </>

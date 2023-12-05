@@ -1,7 +1,6 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import * as Styled from './styles';
 import { useContext, useEffect, useState } from 'react';
-import { context } from 'msw';
 import { ProductContext } from '../../context/ProductContext';
 
 export function ProductInfo() {
@@ -23,14 +22,19 @@ export function ProductInfo() {
   }, [context.data, params.id]);
 
   return (
-    <div>
+    <Styled.ProductInfoWrapper>
       {data && (
-        <div>
+        <Styled.ProductInfoContent>
           <h1>
-            Product Info {data.id} - {data.name} - {data.price}
+            Product Info {data.id} - {data.name} - ${data.price}
           </h1>
-        </div>
+          <img src={data.photo_url} alt={data.name} />
+          <p>{data.description}</p>
+          <Link to="/products">
+            <Styled.BackButton>Voltar para Produtos</Styled.BackButton>
+          </Link>
+        </Styled.ProductInfoContent>
       )}
-    </div>
+    </Styled.ProductInfoWrapper>
   );
 }

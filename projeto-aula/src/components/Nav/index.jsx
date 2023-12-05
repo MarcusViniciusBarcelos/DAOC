@@ -1,13 +1,18 @@
 import P from 'prop-types';
 import * as Styled from './styles';
-import { Link } from 'react-router-dom';
 
 export function Nav() {
   return (
     <Styled.Nav>
-      <Link to="/">Home</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/products">Products</Link>
+      <Styled.NavLink to="/" activeClassName="active">
+        Home
+      </Styled.NavLink>
+      <Styled.NavLink to="/contact" activeClassName="active">
+        Contact
+      </Styled.NavLink>
+      <Styled.NavLink to="/products" activeClassName="active">
+        Products
+      </Styled.NavLink>
     </Styled.Nav>
   );
 }
